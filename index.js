@@ -3,6 +3,7 @@ import { PORT } from "./config/env.js";
 import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
 import subscriptionRouter from "./routes/subscription.router.js";
+import connectToDatabase from "./Database/mongodb.js";
 const port = 5000 | PORT;
 
 const app = express();
@@ -19,5 +20,7 @@ app.listen(port, () => {
   console.log(
     `Robust Backend Server is listening on port http://localhost:${port}`
   );
+
+  connectToDatabase();
 });
 export default app;
