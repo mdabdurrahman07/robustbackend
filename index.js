@@ -16,11 +16,11 @@ app.get("/", (req, res) => {
   res.send("Welcome to Robust Backend Server");
 });
 
-app.listen(port, () => {
+app.listen(port, async () => {
   console.log(
     `Robust Backend Server is listening on port http://localhost:${port}`
   );
 
-  connectToDatabase();
+ await  connectToDatabase();
 });
 export default app;
