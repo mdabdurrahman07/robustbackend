@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import mongoose from "mongoose";
-import { NODE_ENV, MONGODB_URI } from "../config/env.js";
+import { NODE_ENV, MONGODB_URI } from "../Config/env.js";
 
 if (!MONGODB_URI) {
   throw new Error(
